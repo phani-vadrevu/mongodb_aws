@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href= "/css/mysite.css">
+
+  <title>Add users</title>
+</head>
+<body>
+  <form action="/api/post" method="POST">
+    <br> <br> <br> <br>
+    <h3> Add a new record to my database. </h3>
+    <br>
+
+    <!-- Notice the difference in the EJS tags among the two lines below -->
+    <% if (locals.msg) { %>
+      <h5><%= locals.msg %></h2>
+    <% } %>
+
+    <label for="name"> Name of the person to be added </label>
+    <input type="text" name="name" id="name" />
+    <br> <br>
+
+    <label for="age"> Age of the person to be added </label>
+    <input type="text" name="age" id = "age" />
+    <br> <br>
+
+    <button type="submit">Submit</button>
+
+
+    
+  </form>
+</body>
+</html>
